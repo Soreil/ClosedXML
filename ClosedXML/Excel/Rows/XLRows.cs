@@ -195,7 +195,7 @@ namespace ClosedXML.Excel
         public IXLRows AddHorizontalPageBreaks()
         {
             foreach (XLRow row in Rows)
-                row.Worksheet.PageSetup.AddHorizontalPageBreak(row.RowNumber());
+                row.Worksheet.PageSetup.AddHorizontalPageBreak((UInt32)row.RowNumber());
             return this;
         }
 

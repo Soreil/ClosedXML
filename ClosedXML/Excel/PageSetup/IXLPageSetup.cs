@@ -263,7 +263,7 @@ namespace ClosedXML.Excel
         /// <summary>
         /// Gets a list with the row breaks (for printing).
         /// </summary>
-        List<Int32> RowBreaks { get; }
+        List<UInt32> RowBreaks { get; }
         /// <summary>
         /// Gets a list with the column breaks (for printing).
         /// </summary>
@@ -272,7 +272,7 @@ namespace ClosedXML.Excel
         /// Adds a horizontal page break after the given row.
         /// </summary>
         /// <param name="row">The row to insert the break.</param>
-        void AddHorizontalPageBreak(Int32 row);
+        void AddHorizontalPageBreak(UInt32 row);
 
         /// <summary>
         /// Adds a vertical page break after the given column.

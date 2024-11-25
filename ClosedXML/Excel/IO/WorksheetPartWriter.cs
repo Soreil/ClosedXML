@@ -1228,7 +1228,7 @@ namespace ClosedXML.Excel.IO
                 var existingBreaks = rowBreaks.ChildElements.OfType<Break>().ToArray();
                 var rowBreaksToDelete = existingBreaks
                     .Where(rb => !rb.Id.HasValue ||
-                                 !xlWorksheet.PageSetup.RowBreaks.Contains((int)rb.Id.Value))
+                                 !xlWorksheet.PageSetup.RowBreaks.Contains(rb.Id.Value))
                     .ToList();
 
                 foreach (var rb in rowBreaksToDelete)

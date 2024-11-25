@@ -1367,10 +1367,10 @@ namespace ClosedXML.Excel
         {
             for (var i = 0; i < PageSetup.RowBreaks.Count; i++)
             {
-                int br = PageSetup.RowBreaks[i];
+                uint br = PageSetup.RowBreaks[i];
                 if (range.RangeAddress.FirstAddress.RowNumber <= br)
                 {
-                    PageSetup.RowBreaks[i] = br + rowsShifted;
+                    PageSetup.RowBreaks[i] = (uint)(br + rowsShifted);
                 }
             }
         }

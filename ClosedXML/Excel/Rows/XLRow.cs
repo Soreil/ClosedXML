@@ -521,7 +521,7 @@ namespace ClosedXML.Excel
 
         public IXLRow AddHorizontalPageBreak()
         {
-            Worksheet.PageSetup.AddHorizontalPageBreak(RowNumber());
+            Worksheet.PageSetup.AddHorizontalPageBreak((UInt32)RowNumber());
             return this;
         }
 

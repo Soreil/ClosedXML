@@ -65,7 +65,7 @@ namespace ClosedXML.Excel
                 Header = new XLHeaderFooter(worksheet);
                 Footer = new XLHeaderFooter(worksheet);
                 ColumnBreaks = new List<Int32>();
-                RowBreaks = new List<Int32>();
+                RowBreaks = new List<UInt32>();
             }
         }
         public IXLPrintAreas PrintAreas { get; private set; }
@@ -193,9 +193,9 @@ namespace ClosedXML.Excel
         public XLPageOrderValues PageOrder { get; set; }
         public XLShowCommentsValues ShowComments { get; set; }
 
-        public List<Int32> RowBreaks { get; private set; }
+        public List<UInt32> RowBreaks { get; private set; }
         public List<Int32> ColumnBreaks { get; private set; }
-        public void AddHorizontalPageBreak(Int32 row)
+        public void AddHorizontalPageBreak(UInt32 row)
         {
             if (!RowBreaks.Contains(row))
                 RowBreaks.Add(row);

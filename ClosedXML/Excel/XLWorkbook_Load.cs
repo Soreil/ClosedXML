@@ -2321,7 +2321,7 @@ namespace ClosedXML.Excel
             if (rowBreaks == null) return;
 
             foreach (Break rowBreak in rowBreaks.Elements<Break>())
-                ws.PageSetup.RowBreaks.Add(Int32.Parse(rowBreak.Id.InnerText));
+                ws.PageSetup.RowBreaks.Add(UInt32.Parse(rowBreak.Id.InnerText));
         }
 
         private void LoadSheetProperties(SheetProperties sheetProperty, XLWorksheet ws, out PageSetupProperties pageSetupProperties)
